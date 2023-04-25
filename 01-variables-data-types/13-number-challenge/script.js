@@ -1,22 +1,21 @@
-let x;
-x = Math.floor(Math.random() * 100);
+
+const x = Math.floor(Math.random() * 100 + 1);
 console.log('Random Number between 1 to 100 is ' + x);
 
-let y;
-y = Math.floor(Math.random() * 50);
+const y = Math.floor(Math.random() * 50 + 1);
 console.log('Random Number between 1 to 50 is ' + y);
 
-let sumOutput = x + y;
+const sumOutput = x + y;
 console.log('Sum of output is ' + sumOutput);
 
-let diffOutput = x - y;
+const diffOutput = x - y;
 console.log('Difference of output is ' + diffOutput);
 
-let prodOutput = x * y;
+const prodOutput = x * y;
 console.log('Prod of output is ' + prodOutput);
 
-let quotOutput = x / y;
+const quotOutput = x / y;
 console.log('Quot of output is ' + quotOutput);
 
-let remOutput = x % y;
+const remOutput = x % y;
 console.log('Remander of output is ' + remOutput);
