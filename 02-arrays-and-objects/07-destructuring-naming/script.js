@@ -24,3 +24,8 @@ const {
   user: { name },
 } = todo;
 console.log(id, title, name);
+
+//Destructuring arrays
+const numbers = [23, 55, 67, 2, 66];
+const [first, ...rest] = numbers;
+console.log(first, rest);
