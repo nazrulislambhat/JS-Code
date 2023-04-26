@@ -16,3 +16,13 @@ console.log(x);
 const nested = [1, 2, [3, 4], 5, [6, 7]];
 x = nested.flat(); //no more nested arrays inside array
 console.log(x);
+
+//static methods on arrays
+let y;
+y = Array.isArray(fruits); //checks if its an array & returns true / false
+y = Array.from('nazrul islam'); //creates an array from the given words
+const a = 2;
+const b = 3;
+const c = 5;
+y = Array.of(a, b, c); //creates an array of abc values
+console.log(y);
