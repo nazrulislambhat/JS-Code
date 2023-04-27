@@ -1,6 +1,6 @@
 const library = [
   {
-    title: 'Stbtle Art of not giving a F',
+    title: 'Subtle Art of not giving a F',
     author: 'Mark',
     status: {
       own: true,
@@ -32,4 +32,10 @@ library[0].status.read = true;
 library[1].status.read = true;
 library[1].status.read = true;
 
-console.log(library);
+// console.log(library);
+
+const { title: firstBook } = library[0];
+// console.log(firstBook);
+
+const libraryJson = JSON.stringify(library);
+console.log(libraryJson);
