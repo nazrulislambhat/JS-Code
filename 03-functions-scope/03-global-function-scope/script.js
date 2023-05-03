@@ -1,1 +1,4 @@
-console.log('Hello');
+function run() {
+  console.log(window.innerWidth);
+}
+run();
