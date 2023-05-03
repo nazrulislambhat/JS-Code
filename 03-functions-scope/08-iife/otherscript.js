@@ -1,2 +1,2 @@
-const user = 'brad';
+const user = 'from otherscriptjs';
 console.log(user);

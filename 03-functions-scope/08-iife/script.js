@@ -1,5 +1,5 @@
 (function () {
-  const user = 'nazrul';
+  const user = 'fropm scriptjs';
   console.log(user);
 })();
 
