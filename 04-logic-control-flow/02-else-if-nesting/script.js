@@ -7,3 +7,4 @@ if (hour < 12) {
 } else {
   console.log('Good Evening');
 }
+//Nested if
