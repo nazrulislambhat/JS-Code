@@ -19,4 +19,4 @@ function calculator(num1, num2, operator) {
   console.log(result);
   return result;
 }
-calculator(5, 7, '+');
+calculator(5, 3, '+');
