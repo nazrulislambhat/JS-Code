@@ -34,6 +34,6 @@ Line3: n1 & n2 are assigned 100 & 50 respectively
 Line4: Calculation is done & 150 is put into sum variable
 Line5: Return to Global EC with 150 into sum
 Line7: Return sum value & put it in sum1
-Line8: Open another Function EC & do the process all over again
+Line8: Open another Function EC & do the process all over again with different parameters
 
 */
