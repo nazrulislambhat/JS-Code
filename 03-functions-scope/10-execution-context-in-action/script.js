@@ -15,5 +15,10 @@ console.log(sum2);
 Line1: x variable is allocted memory & stores "undefined"
 Line2: y variable is allocted memory & stores "undefined"
 Line3: getSum() function is allocated momory & stores all code
+Line7: sum1 variable is allocated memory & stores "undefined"
+
+
+
+
 
 */
