@@ -76,3 +76,6 @@ if (Object.keys(user).length > 0) {
 } else {
   console.log('No User');
 }
+//Loose equality
+console.log(false == 0); //true because both are falsy
+console.log(false === 0); //false because strict === operator is used
