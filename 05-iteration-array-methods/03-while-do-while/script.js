@@ -21,3 +21,8 @@ while (j <= 10) {
   }
   j++;
 }
+
+//do
+do {
+  console.log("I AM DO")
+} while (i < 0)
