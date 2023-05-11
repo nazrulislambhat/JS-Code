@@ -24,5 +24,5 @@ while (j <= 10) {
 
 //do
 do {
-  console.log("I AM DO")
-} while (i < 0)
+  console.log('I AM DO');
+} while (i < 0);
