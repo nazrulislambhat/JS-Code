@@ -42,3 +42,9 @@ const earlyCompanies = companies.filter(
   (company) => company.start >= 1900 && company.end <= 2000
 );
 console.log(earlyCompanies);
+
+//Get companies that lasted for more than 100 years
+const bigCompanies = companies.filter(
+  (company) => company.end - company.start >= 100
+);
+console.log(bigCompanies);
