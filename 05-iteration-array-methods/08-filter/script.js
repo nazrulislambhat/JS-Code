@@ -31,3 +31,8 @@ const companies = [
 ];
 console.log(companies);
 //Get only Finance companies
+const financeCompanies = companies.filter(
+  (company) => company.category === 'Finance'
+);
+
+console.log(financeCompanies);
