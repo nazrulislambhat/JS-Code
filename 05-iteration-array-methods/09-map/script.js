@@ -24,3 +24,5 @@ const companies = [
 console.log(companies);
 
 //create of array of company names
+const companyNames = companies.map((company) => company.name); //for each company get the company name
+console.log(companyNames);
