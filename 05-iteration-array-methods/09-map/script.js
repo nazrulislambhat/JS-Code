@@ -32,3 +32,9 @@ const companyAndCategoryNames = companies.map(
   (company) => 'Name: ' + company.name + ' ' + 'Category: ' + company.category
 ); //for each company get the company name & category
 console.log(companyAndCategoryNames);
+
+//OR
+
+const companyInfo = companies.map((company) => {
+    
+});
