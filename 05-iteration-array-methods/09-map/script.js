@@ -43,3 +43,16 @@ const companyInfo = companies.map((company) => {
 });
 
 console.log(companyInfo);
+
+//create an array of objects with name & length of each company in years
+const runningYears = companies.map((company) => {
+  return {
+    name: company.name,
+    length: company.end - company.start,
+  };
+});
+console.log(runningYears);
+
+
+//chain map method 
+//get a number square root it & then double

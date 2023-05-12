@@ -43,8 +43,8 @@ const earlyCompanies = companies.filter(
 );
 console.log(earlyCompanies);
 
-//Get companies that lasted for more than 100 years
+//Get companies that lasted for more than 500 years
 const bigCompanies = companies.filter(
-  (company) => company.end - company.start >= 100
+  (company) => company.end - company.start >= 500
 );
 console.log(bigCompanies);
