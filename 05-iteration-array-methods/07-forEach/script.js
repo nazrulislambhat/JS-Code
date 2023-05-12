@@ -8,3 +8,9 @@ socials.forEach((social) => {
 });
 
 //The primary advantage of using forEach over a simple for loop is that it is more concise and can make your code more readable. Additionally, forEach also works well with callback functions, making it a popular choice for working with asynchronous code.
+
+//passing a named function
+function logSocials(social) {
+  console.log(social);
+}
+socials.forEach(logSocials);
