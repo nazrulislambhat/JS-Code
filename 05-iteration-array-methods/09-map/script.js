@@ -53,6 +53,9 @@ const runningYears = companies.map((company) => {
 });
 console.log(runningYears);
 
-
-//chain map method 
+//chain map method
 //get a number square root it & then double
+const squareAndDouble = numbers
+  .map((number) => Math.sqrt(number))
+  .map((sqrt) => sqrt * 2);
+console.log(squareAndDouble);
