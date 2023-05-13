@@ -9,5 +9,5 @@ Started at 0 line 4 ran the function for all elements eg if it was on 5 the prev
 */
 
 //SHORT VERSION
-const sum2 = numbers.reduce((prev, curr) => prev + curr, 0);
-console.log(sum2);
+const sum2 = numbers.reduce((prev, curr) => prev + curr, 10);
+console.log(sum2); // we get 65 as output becaue the inition inition value is now 10
