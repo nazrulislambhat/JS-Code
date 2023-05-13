@@ -14,7 +14,10 @@ console.log(sum2); // we get 65 as output becaue the inition inition value is no
 
 //Kinda realworld example
 const cart = [
-  { id: 1, name: Product1, price: 180 },
-  { id: 2, name: Product2, price: 1350 },
-  { id: 3, name: Product3, price: 13440 },
+  { id: 1, name: 'Product1', price: 180 },
+  { id: 2, name: 'Product2', price: 190 },
+  { id: 3, name: 'Product3', price: 160 },
 ];
+const cartTotal = cart.reduce((prevPrice, product) => prevPrice + product.price, 0);
+
+console.log(cartTotal);
