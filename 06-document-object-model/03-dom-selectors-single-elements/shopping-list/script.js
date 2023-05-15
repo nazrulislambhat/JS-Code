@@ -22,3 +22,6 @@ title.style.backgroundColor = 'pink';
 
 //document.querySelector
 console.log(document.querySelector('h1')); //selects first h1 in the page
+console.log(document.querySelector('.container')); //select class
+console.log(document.querySelector('#app-title')); //select title
+console.log(document.querySelector('input[text]')); //select attribute
