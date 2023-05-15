@@ -18,4 +18,21 @@ listItems.forEach((item) => {
     item.style.color = 'DarkRed';
   }
 });
+
+const listItemsByClass = document.getElementsByClassName('item');
+console.log(listItemsByClass); //HTML collection output
+
+//Style all
+
+
+// listItemsbyClass.forEach((item) => {
+//   item.style.color = 'Pink'; //will not work because its an html collection
+// });
+
+
+//FIX
+const convertToArray = Array.from(listItemsByClass);
+convertToArray.forEach((item) => {
+  item.style.color = 'Magenta'; 
+});
 console.log(listItems);
