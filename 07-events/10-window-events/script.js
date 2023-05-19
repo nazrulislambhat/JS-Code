@@ -20,3 +20,4 @@
 //   ).innerText = `${window.innerWidth} x ${window.innerHeight}`;
 // }); 
 
+//we also have scroll 
