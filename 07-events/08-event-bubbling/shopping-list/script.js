@@ -10,8 +10,9 @@ If we have click event on all these components the BUtton will be firred first &
 const button = document.querySelector('button');
 const div = document.querySelector('form div:nth-child(2)');
 
-button.addEventListener('click', () => {
+button.addEventListener('click', (e) => {
   alert('clicked');
+  e.stopPropagation; //stops parent click
 });
 
 div.addEventListener('click', () => {
