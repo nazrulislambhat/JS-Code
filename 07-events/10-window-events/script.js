@@ -8,7 +8,7 @@
 
 // window.addEventListener('load', () => {
 //   document.querySelector('h1').textContent = 'Hello World';
-// }); //will wait for the entire page to load
+// }); //will wait for the entire page too load
 
 // window.addEventListener('DOMContentLoaded', () => {
 //   document.querySelector('h1').textContent = 'Hello World';
