@@ -46,14 +46,15 @@ function removeItem(e) {
   }
 }
 
-
 function clearItems() {
   while (itemList.firstChild) {
     itemList.removeChild(itemList.firstChild);
   }
 }
 
-
+function checkUI() {
+    
+}
 // Event Listeners
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', removeItem);
