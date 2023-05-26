@@ -50,9 +50,9 @@ header h1 {
   font-size: 18px;
   margin-bottom: 20px;
   padding: 10px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  background: transparent;
+  border: 1px solid #000119;
+  border-radius: 5px;
+  background: white;
   outline: none;
 }
 
