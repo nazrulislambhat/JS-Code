@@ -28,6 +28,11 @@ function onaddItemSubmit(e) {
     itemToEdit.classList.remove('edit-mode');
     itemToEdit.remove();
     isEditMode = false;
+  } else {
+    if (checkIfItemExists(newItem)) {
+      alert('Duplicate Item');
+      return;
+    }
   }
   //create DOM element
   addItemToDOM(newItem);
@@ -92,7 +97,11 @@ function onClickItem(e) {
     setItemToEdit(e.target);
   }
 }
+function checkIfItemExists(item) {
+  const itemsFromStorage = getItemsFromStorage();
 
+  return itemsFromStorage.includes(item);
+}
 function setItemToEdit(item) {
   isEditMode = true;
   itemList
@@ -121,6 +130,7 @@ function removeItem(item) {
     resetUI();
   }
 }
+
 function removeItemFromStorage(item) {
   let itemsFromStorage = getItemsFromStorage();
 
@@ -171,7 +181,6 @@ function resetUI() {
 }
 
 //Initialize app
-
 function init() {
   itemForm.addEventListener('submit', onaddItemSubmit);
   itemList.addEventListener('click', onClickItem);
