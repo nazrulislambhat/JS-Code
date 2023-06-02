@@ -13,5 +13,13 @@ const promise = new Promise((resolve, reject) => {
 promise
   .then((user) => {
     console.log(user);
+    return user.name;
   })
-  .catch((error) => console.log(error))
+  .then((name) => {
+    console.log(name);
+    return name.length;
+  })
+  .then((length) => {
+    console.log(length);
+  })
+  .catch((error) => console.log(error));
