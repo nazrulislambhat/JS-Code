@@ -3,29 +3,30 @@ function clock() {
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
 
-  // Setup canvas
-  ctx.save(); // save the default state
-  ctx.clearRect(0, 0, 500, 500);
-  ctx.translate(250, 250); // Put 0,0 in the middle
-  ctx.rotate(-Math.PI / 2); // Rotate clock -90deg
+  //Canvas setup
 
-  // Set default styles
-  ctx.strokeStyle = '#000000';
-  ctx.fillStyle = '#f4f4f4';
+  ctx.save(); //save default
+  ctx.clearRect(0, 0, 500, 500);
+  ctx.translate(250, 250); //put 0, 0 in the middle
+  ctx.rotate(-Math.PI / 2); //rotate -90 deg
+
+  //set default styles
+  ctx.strokeStyle = '#002E2C';
+  ctx.fillStyle = '#FFE9CE';
   ctx.lineWidth = 5;
   ctx.lineCap = 'round';
 
-  // Draw clock face/border
+  //draw clock face/border
   ctx.save();
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#800000';
+  ctx.strokeStyle = '#F86624';
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fill();
   ctx.restore();
 
-  // Draw hour lines
+  //draw hour marks
   ctx.save();
   for (let i = 0; i < 12; i++) {
     ctx.beginPath();
@@ -36,9 +37,9 @@ function clock() {
   }
   ctx.restore();
 
-  // Draw minute lines
+  //draw minutes marks
   ctx.save();
-  ctx.lineWidth = 4;
+  ctx.lineWidth = 3;
   for (let i = 0; i < 60; i++) {
     if (i % 5 !== 0) {
       ctx.beginPath();
@@ -50,19 +51,17 @@ function clock() {
   }
   ctx.restore();
 
-  // Get current time
+  //get cur time
   const hr = now.getHours() % 12;
   const min = now.getMinutes();
   const sec = now.getSeconds();
 
-  // console.log(`${hr}:${min}:${sec}`);
-
-  // Draw hour hand
+  //draw hr hand
   ctx.save();
   ctx.rotate(
     (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec
   );
-  ctx.strokeStyle = '#800000';
+  ctx.strokeStyle = '#001B2E';
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -70,23 +69,23 @@ function clock() {
   ctx.stroke();
   ctx.restore();
 
-  // Draw min hand
+  //draw min hand
   ctx.save();
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
-  ctx.strokeStyle = '#800000';
-  ctx.lineWidth = 10;
+  ctx.strokeStyle = '#8FCB9B';
+  ctx.lineWidth = 8;
   ctx.beginPath();
   ctx.moveTo(-28, 0);
   ctx.lineTo(112, 0);
   ctx.stroke();
   ctx.restore();
 
-  // Draw sec hand
+  //draw sec hand
   ctx.save();
-  ctx.rotate((sec * Math.PI) / 30);
-  ctx.strokeStyle = '#FF7F50';
-  ctx.fillStyle = '#FF7F50';
-  ctx.lineWidth = 6;
+  ctx.rotate(sec * (Math.PI / 30));
+  ctx.strokeStyle = '#A62639';
+  ctx.fillStyle = '#A62639';
+  ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
   ctx.lineTo(100, 0);
@@ -96,8 +95,7 @@ function clock() {
   ctx.fill();
   ctx.restore();
 
-  ctx.restore(); // restore default state
-
+  ctx.restore(); //restore default
   requestAnimationFrame(clock);
 }
 
