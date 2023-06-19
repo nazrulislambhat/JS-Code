@@ -1,6 +1,13 @@
+const faceColor = document.getElementById('face-color');
+const lineColor = document.getElementById('line-color');
+const borderColor = document.getElementById('border-color');
+const largeColor = document.getElementById('large-hand-color');
+const secondColor = document.getElementById('second-hand-color');
+const canvas = document.getElementById('canvas');
+
 function clock() {
   const now = new Date();
-  const canvas = document.getElementById('canvas');
+
   const ctx = canvas.getContext('2d');
 
   //Canvas setup
@@ -12,7 +19,7 @@ function clock() {
 
   //set default styles
   ctx.strokeStyle = '#002E2C';
-  ctx.fillStyle = '#FFE9CE';
+  ctx.fillStyle = faceColor.value;
   ctx.lineWidth = 5;
   ctx.lineCap = 'round';
 
@@ -20,7 +27,7 @@ function clock() {
   ctx.save();
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#F86624';
+  ctx.strokeStyle = borderColor.value;
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fill();
@@ -61,7 +68,7 @@ function clock() {
   ctx.rotate(
     (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec
   );
-  ctx.strokeStyle = '#001B2E';
+  ctx.strokeStyle = largeColor.value;
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -72,7 +79,7 @@ function clock() {
   //draw min hand
   ctx.save();
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
-  ctx.strokeStyle = '#8FCB9B';
+  ctx.strokeStyle = secondColor.value;
   ctx.lineWidth = 8;
   ctx.beginPath();
   ctx.moveTo(-28, 0);
@@ -83,8 +90,8 @@ function clock() {
   //draw sec hand
   ctx.save();
   ctx.rotate(sec * (Math.PI / 30));
-  ctx.strokeStyle = '#A62639';
-  ctx.fillStyle = '#A62639';
+  ctx.strokeStyle = lineColor.value;
+  ctx.fillStyle = borderColor.value;
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
@@ -100,3 +107,10 @@ function clock() {
 }
 
 requestAnimationFrame(clock);
+document.getElementById('save-btn').addEventListener('click', () => {
+  const dataURL = canvas.toDataURL('image/png');
+  const link = document.createElement('a');
+  link.download = 'clock.png';
+  link.href = dataURL;
+  link.click();
+});
